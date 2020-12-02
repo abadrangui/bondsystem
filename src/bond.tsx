@@ -31,7 +31,7 @@ const PostFilter = (props: any) => {
   </Filter>);
 };
 
-export const PostList = (props: any) => (
+export const BondList = (props: any) => (
   <List {...props} filters={<PostFilter />}>
     <Datagrid>
       <TextField source="code" label="Код" />
@@ -51,7 +51,7 @@ export const PostList = (props: any) => (
   </List>
 );
 
-export const PostShow = (props: any) => (
+export const BondShow = (props: any) => (
   <Show {...props}>
     <SimpleShowLayout>
       <TextField source="code" label="Код" />
@@ -68,7 +68,7 @@ export const PostShow = (props: any) => (
   </Show>
 );
 
-export const PostCreate = (props: any) => (
+export const BondCreate = (props: any) => (
   <Create {...props}>
     <SimpleForm>
       <TextInput source="code" label="Код" />
@@ -85,7 +85,7 @@ export const PostCreate = (props: any) => (
   </Create>
 );
 
-export const PostEdit = (props: any) => (
+export const BondEdit = (props: any) => (
   <Edit {...props}>
     <SimpleForm>
       <TextInput source="code" label="Код" />
