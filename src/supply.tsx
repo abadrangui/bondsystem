@@ -32,15 +32,11 @@ const PostFilter = (props: any) => {
   </Filter>);
 };
 
-export const TicketList = (props: any) => (
-  <List title="Захиалгын жагсаалт"  {...props} filters={<PostFilter />} exporter={false}>
+export const SupplyList = (props: any) => (
+  <List {...props} title="Нийлүүлэлт" filters={<PostFilter />} exporter={false}>
     <Datagrid>
       <ReferenceField label="Үнэт цаас" source="bondId" reference="bond">
         <TextField source="symbol" />
-      </ReferenceField>
-
-      <ReferenceField label="Үнэт цаас" source="bondId" reference="bond">
-        <TextField source="companyName" />
       </ReferenceField>
 
       <ReferenceField label="Харилцагч" source="customerId" reference="customer">
@@ -48,8 +44,8 @@ export const TicketList = (props: any) => (
         {/* <TextField source="firstname" /> */}
       </ReferenceField>
 
-      <NumberField source="ticketPrice" label="Захиалгын үнэ" />
-      <TextField source="ticketQuantity" label="Захиалгын ширхэг" />
+      <NumberField source="ticketPrice" label="Нийлүүлэлтийн үнэ" />
+      <TextField source="ticketQuantity" label="Нийлүүлэлтийн ширхэг" />
 
       <ShowButton label="Үзэх" />
       <EditButton label="Засах" />
@@ -58,8 +54,8 @@ export const TicketList = (props: any) => (
   </List>
 );
 
-export const TicketShow = (props: any) => (
-  <Show title="Захиалга" {...props}>
+export const SupplyShow = (props: any) => (
+  <Show title="Нийлүүлэлт"  {...props}>
     <SimpleShowLayout>
 
       <ReferenceField label="Үнэт цаас" source="bondId" reference="bond">
@@ -71,8 +67,9 @@ export const TicketShow = (props: any) => (
         {/* <TextField source="firstname" /> */}
       </ReferenceField>
 
-      <NumberField source="ticketPrice" label="Захиалгын үнэ" />
-      <TextField source="ticketQuantity" label="Захиалгын ширхэг" />
+      <NumberField source="ticketPrice" label="Нийлүүлэлтийн үнэ" />
+      <TextField source="ticketQuantity" label="Нийлүүлэлтийн ширхэг" />
+
     </SimpleShowLayout>
   </Show>
 );
@@ -86,8 +83,8 @@ const BondData = (props: any) => {
   );
 };
 
-export const TicketCreate = (props: any) => (
-  <Create title="Захиалга" {...props}>
+export const SupplyCreate = (props: any) => (
+  <Create title="Нийлүүлэлт" {...props}>
     <SimpleForm redirect="list">
       <ReferenceInput label="Үнэт цаас" source="bondId" reference="bond">
         <SelectInput
@@ -107,16 +104,16 @@ export const TicketCreate = (props: any) => (
         />
       </ReferenceInput>
 
-      <NumberInput source="ticketPrice" label="Захиалгын үнэ" />
-      <NumberInput source="ticketQuantity" label="Захиалгын ширхэг" />
+      <NumberInput source="ticketPrice" label="Нийлүүлэлтийн үнэ" />
+      <NumberInput source="ticketQuantity" label="Нийлүүлэлтийн ширхэг" />
 
 
     </SimpleForm>
   </Create>
 );
 
-export const TicketEdit = (props: any) => (
-  <Edit title="Захиалга" {...props}>
+export const SupplyEdit = (props: any) => (
+  <Edit title="Нийлүүлэлт"  {...props}>
     <SimpleForm>
       <ReferenceInput label="Үнэт цаас" source="bondId" reference="bond">
         <SelectInput
@@ -136,8 +133,8 @@ export const TicketEdit = (props: any) => (
         />
       </ReferenceInput>
 
-      <NumberInput source="ticketPrice" label="Захиалгын үнэ" />
-      <NumberInput source="ticketQuantity" label="Захиалгын ширхэг" />
+      <NumberInput source="ticketPrice" label="Нийлүүлэлтийн үнэ" />
+      <NumberInput source="ticketQuantity" label="Нийлүүлэлтийн ширхэг" />
 
     </SimpleForm>
   </Edit>

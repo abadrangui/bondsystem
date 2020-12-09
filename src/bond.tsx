@@ -32,7 +32,12 @@ const PostFilter = (props: any) => {
 };
 
 export const BondList = (props: any) => (
-  <List {...props} filters={<PostFilter />} exporter={false}>
+  <List
+    title="Үнэт цаасны жагсаалт"
+    filters={<PostFilter />}
+    exporter={false}
+    {...props}
+  >
     <Datagrid>
       <TextField source="code" label="Код" />
       <TextField source="symbol" label="Симбол" />
@@ -40,7 +45,7 @@ export const BondList = (props: any) => (
       <TextField source="companyType" label="Компаний ангилал" />
       {/* <NumberField source="quantity" label="Нийт хувьцааны т.ш." />
       <NumberField source="offeredPrice" label="Санал болгосон үнэ" />
-      <NumberField source="offeredQuantity" label="Санал болгосон ширхэ" />
+      <NumberField source="offeredQuantity" label="Санал болгосон ширхэг" />
       <NumberField source="govQuantity" label="Төрийн эзэмшлийн тоо" />
       <NumberField source="govPercent" label="Төрийн эзэмшлийн хувь" /> */}
       <TextField source="tradeStatus" label="Арилжааны эрх" />
@@ -52,7 +57,7 @@ export const BondList = (props: any) => (
 );
 
 export const BondShow = (props: any) => (
-  <Show {...props}>
+  <Show title="Үнэт цаас" {...props}>
     <SimpleShowLayout>
       <TextField source="code" label="Код" />
       <TextField source="symbol" label="Симбол" />
@@ -60,7 +65,7 @@ export const BondShow = (props: any) => (
       <TextField source="companyType" label="Компаний ангилал" />
       <NumberField source="quantity" label="Нийт хувьцааны т.ш." />
       <NumberField source="offeredPrice" label="Санал болгосон үнэ" />
-      <NumberField source="offeredQuantity" label="Санал болгосон ширхэ" />
+      <NumberField source="offeredQuantity" label="Санал болгосон ширхэг" />
       <NumberField source="govQuantity" label="Төрийн эзэмшлийн тоо" />
       <NumberField source="govPercent" label="Төрийн эзэмшлийн хувь" />
       <TextField source="tradeStatus" label="Арилжааны эрх" />
@@ -69,7 +74,7 @@ export const BondShow = (props: any) => (
 );
 
 export const BondCreate = (props: any) => (
-  <Create {...props} >
+  <Create title="Үнэт цаас" {...props} >
     <SimpleForm redirect="list">
       <TextInput source="code" label="Код" />
       <TextInput source="symbol" label="Симбол" />
@@ -77,7 +82,7 @@ export const BondCreate = (props: any) => (
       <TextInput source="companyType" label="Компаний ангилал" />
       <NumberInput source="quantity" label="Нийт хувьцааны т.ш." />
       <NumberInput source="offeredPrice" label="Санал болгосон үнэ" />
-      <NumberInput source="offeredQuantity" label="Санал болгосон ширхэ" />
+      <NumberInput source="offeredQuantity" label="Санал болгосон ширхэг" />
       <NumberInput source="govQuantity" label="Төрийн эзэмшлийн тоо" />
       <NumberInput source="govPercent" label="Төрийн эзэмшлийн хувь" />
       <TextInput source="tradeStatus" label="Арилжааны эрх" />
@@ -86,7 +91,7 @@ export const BondCreate = (props: any) => (
 );
 
 export const BondEdit = (props: any) => (
-  <Edit {...props}>
+  <Edit title="Үнэт цаас" {...props}>
     <SimpleForm>
       <TextInput source="code" label="Код" />
       <TextInput source="symbol" label="Симбол" />
@@ -94,7 +99,7 @@ export const BondEdit = (props: any) => (
       <TextInput source="companyType" label="Компаний ангилал" />
       <NumberInput source="quantity" label="Нийт хувьцааны т.ш." />
       <NumberInput source="offeredPrice" label="Санал болгосон үнэ" />
-      <NumberInput source="offeredQuantity" label="Санал болгосон ширхэ" />
+      <NumberInput source="offeredQuantity" label="Санал болгосон ширхэг" />
       <NumberInput source="govQuantity" label="Төрийн эзэмшлийн тоо" />
       <NumberInput source="govPercent" label="Төрийн эзэмшлийн хувь" />
       <TextInput source="tradeStatus" label="Арилжааны эрх" />

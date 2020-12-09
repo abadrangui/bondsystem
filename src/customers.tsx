@@ -32,57 +32,50 @@ const PostFilter = (props: any) => {
 };
 
 export const CustomerList = (props: any) => (
-  <List {...props} filters={<PostFilter />} exporter={false}>
+  <List title="Харилцагчийн жагсаалт" {...props} filters={<PostFilter />} exporter={false}>
     <Datagrid>
       <TextField source="lastname" label="Овог" />
       <TextField source="firstname" label="Нэр" />
+      <TextField source="regNo" label="Регистрийн дугаар" />
       <TextField source="companyName" label="Компаний нэр" />
-      <TextField source="regNo" label="Регистрийн дугаа" />
-      <TextField source="accountName" label="Дансны нэр" />
-      <TextField source="accountNumber" label="Дансны дугаар" />
-      <NumberField source="balance" label="Дансны үлдэгдэл" />
+
+
+      <ShowButton label="Үзэх" />
+      <EditButton label="Засах" />
+      <DeleteButton label="Устгах" />
     </Datagrid>
   </List>
 );
 
 export const CustomerShow = (props: any) => (
-  <Show {...props}>
+  <Show title="Харилцагч" {...props}>
     <SimpleShowLayout>
       <TextField source="lastname" label="Овог" />
       <TextField source="firstname" label="Нэр" />
+      <TextField source="regNo" label="Регистрийн дугаар" />
       <TextField source="companyName" label="Компаний нэр" />
-      <TextField source="regNo" label="Регистрийн дугаа" />
-      <TextField source="accountName" label="Дансны нэр" />
-      <TextField source="accountNumber" label="Дансны дугаар" />
-      <NumberField source="balance" label="Дансны үлдэгдэл" />
     </SimpleShowLayout>
   </Show>
 );
 
 export const CustomerCreate = (props: any) => (
-  <Create {...props}>
+  <Create title="Харилцагч" {...props}>
     <SimpleForm redirect="list">
       <TextInput source="lastname" label="Овог" />
       <TextInput source="firstname" label="Нэр" />
+      <TextInput source="regNo" label="Регистрийн дугаар" />
       <TextInput source="companyName" label="Компаний нэр" />
-      <TextInput source="regNo" label="Регистрийн дугаа" />
-      <TextInput source="accountName" label="Дансны нэр" />
-      <NumberInput source="accountNumber" label="Дансны дугаар" />
-      <NumberInput source="balance" label="Дансны үлдэгдэл" />
     </SimpleForm>
   </Create>
 );
 
 export const CustomerEdit = (props: any) => (
-  <Edit {...props}>
+  <Edit title="Харилцагч" {...props}>
     <SimpleForm>
       <TextInput source="lastname" label="Овог" />
       <TextInput source="firstname" label="Нэр" />
+      <TextInput source="regNo" label="Регистрийн дугаар" />
       <TextInput source="companyName" label="Компаний нэр" />
-      <TextInput source="regNo" label="Регистрийн дугаа" />
-      <TextInput source="accountName" label="Дансны нэр" />
-      <NumberInput source="accountNumber" label="Дансны дугаар" />
-      <NumberInput source="balance" label="Дансны үлдэгдэл" />
     </SimpleForm>
   </Edit>
 );

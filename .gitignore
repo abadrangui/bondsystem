@@ -11,8 +11,6 @@
 # production
 /build
 
-/src/FIREBASE_CONFIG.js
-
 # misc
 .DS_Store
 .env.local
