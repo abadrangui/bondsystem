@@ -2,7 +2,7 @@ import * as React from "react";
 import { BondList, BondShow, BondCreate, BondEdit } from "./bond";
 import { CustomerList, CustomerShow, CustomerCreate, CustomerEdit } from "./customers";
 import { TicketList, TicketShow, TicketCreate, TicketEdit } from "./tickets";
-import { Admin, Resource } from "react-admin";
+import { Admin, Resource, Login } from "react-admin";
 import {
   FirebaseDataProvider,
   FirebaseAuthProvider,
@@ -13,20 +13,31 @@ import UserIcon from '@material-ui/icons/Group';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
 
+import LoginScreen from './screens/LoginScreen';
+
+import './App.css';
+
 const config = require("./FIREBASE_CONFIG.js").firebaseConfig;
+
 
 const options: RAFirebaseOptions = {
   logging: true,
   rootRef: "root_collection/some_document",
   watch: ["bond"],
 };
+
 const dataProvider = FirebaseDataProvider(config, options);
 const authProvider = FirebaseAuthProvider(config, options);
 
 class App extends React.Component {
   render() {
     return (
-      <Admin dataProvider={dataProvider} authProvider={authProvider}>
+      <Admin
+        dataProvider={dataProvider}
+        authProvider={authProvider}
+        loginPage={LoginScreen}
+        title="Нэвтрэх хэсэг"
+      >
         <Resource
           options={{
             label: 'Үнэт цаас'

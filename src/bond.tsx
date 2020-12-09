@@ -32,17 +32,17 @@ const PostFilter = (props: any) => {
 };
 
 export const BondList = (props: any) => (
-  <List {...props} filters={<PostFilter />}>
+  <List {...props} filters={<PostFilter />} exporter={false}>
     <Datagrid>
       <TextField source="code" label="Код" />
       <TextField source="symbol" label="Симбол" />
       <TextField source="companyName" label="Компаний нэр" />
       <TextField source="companyType" label="Компаний ангилал" />
-      <NumberField source="quantity" label="Нийт хувьцааны т.ш." />
+      {/* <NumberField source="quantity" label="Нийт хувьцааны т.ш." />
       <NumberField source="offeredPrice" label="Санал болгосон үнэ" />
       <NumberField source="offeredQuantity" label="Санал болгосон ширхэ" />
       <NumberField source="govQuantity" label="Төрийн эзэмшлийн тоо" />
-      <NumberField source="govPercent" label="Төрийн эзэмшлийн хувь" />
+      <NumberField source="govPercent" label="Төрийн эзэмшлийн хувь" /> */}
       <TextField source="tradeStatus" label="Арилжааны эрх" />
       <ShowButton label="Үзэх" />
       <EditButton label="Засах" />
@@ -69,8 +69,8 @@ export const BondShow = (props: any) => (
 );
 
 export const BondCreate = (props: any) => (
-  <Create {...props}>
-    <SimpleForm>
+  <Create {...props} >
+    <SimpleForm redirect="list">
       <TextInput source="code" label="Код" />
       <TextInput source="symbol" label="Симбол" />
       <TextInput source="companyName" label="Компаний нэр" />

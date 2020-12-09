@@ -33,7 +33,7 @@ const PostFilter = (props: any) => {
 };
 
 export const TicketList = (props: any) => (
-  <List {...props} filters={<PostFilter />}>
+  <List {...props} filters={<PostFilter />} exporter={false}>
     <Datagrid>
       <ReferenceField label="Үнэт цаас" source="bondId" reference="bond">
         <TextField source="symbol" />
@@ -45,7 +45,7 @@ export const TicketList = (props: any) => (
       </ReferenceField>
 
       <NumberField source="ticketPrice" label="Захиалгын үнэ" />
-      <NumberField source="ticketQuantity" label="Захиалгын ширхэг" />
+      <TextField source="ticketQuantity" label="Захиалгын ширхэг" />
 
       <ShowButton label="Үзэх" />
       <EditButton label="Засах" />
@@ -82,7 +82,7 @@ const BondData = (props: any) => {
 
 export const TicketCreate = (props: any) => (
   <Create {...props}>
-    <SimpleForm>
+    <SimpleForm redirect="list">
       <ReferenceInput label="Үнэт цаас" source="bondId" reference="bond">
         <SelectInput
           optionText={(record: any) => {
