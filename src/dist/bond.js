@@ -18,7 +18,7 @@ var React = require("react");
 var react_admin_1 = require("react-admin");
 var PostFilter = function (props) {
     return (React.createElement(react_admin_1.Filter, __assign({}, props),
-        React.createElement(react_admin_1.TextInput, { label: "Search", source: "title", alwaysOn: true })));
+        React.createElement(react_admin_1.TextInput, { label: "\u0421\u0438\u043C\u0431\u043E\u043B\u043E\u043E\u0440 \u0445\u0430\u0439\u0445", source: "symbol", alwaysOn: true })));
 };
 exports.BondList = function (props) { return (React.createElement(react_admin_1.List, __assign({ title: "\u04AE\u043D\u044D\u0442 \u0446\u0430\u0430\u0441\u043D\u044B \u0436\u0430\u0433\u0441\u0430\u0430\u043B\u0442", filters: React.createElement(PostFilter, null), exporter: false }, props),
     React.createElement(react_admin_1.Datagrid, null,

@@ -27,7 +27,7 @@ import RichTextInput from "ra-input-rich-text";
 
 const PostFilter = (props: any) => {
   return (<Filter {...props}>
-    <TextInput label="Search" source="title" alwaysOn />
+    <TextInput label="Нэрээр хайх" source="lastname" alwaysOn />
   </Filter>);
 };
 

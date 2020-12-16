@@ -33,7 +33,7 @@ const PostFilter = (props: any) => {
 };
 
 export const SupplyList = (props: any) => (
-  <List {...props} title="Нийлүүлэлт" filters={<PostFilter />} exporter={false}>
+  <List {...props} title="Нийлүүлэлт" exporter={false}>
     <Datagrid>
       <ReferenceField label="Үнэт цаас" source="bondId" reference="bond">
         <TextField source="symbol" />

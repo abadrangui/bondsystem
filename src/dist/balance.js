@@ -21,7 +21,7 @@ var PostFilter = function (props) {
     return (React.createElement(react_admin_1.Filter, __assign({}, props),
         React.createElement(react_admin_1.TextInput, { label: "Search", source: "title", alwaysOn: true })));
 };
-exports.BalanceList = function (props) { return (React.createElement(react_admin_1.List, __assign({ title: "\u04AE\u043B\u0434\u044D\u0433\u0434\u044D\u043B \u0448\u0430\u043B\u0433\u0430\u0445" }, props, { filters: React.createElement(PostFilter, null), exporter: false }),
+exports.BalanceList = function (props) { return (React.createElement(react_admin_1.List, __assign({ title: "\u04AE\u043B\u0434\u044D\u0433\u0434\u044D\u043B \u0448\u0430\u043B\u0433\u0430\u0445" }, props, { exporter: false }),
     React.createElement(react_admin_1.Datagrid, null,
         React.createElement(react_admin_1.ReferenceField, { label: "\u0425\u0430\u0440\u0438\u043B\u0446\u0430\u0433\u0447", source: "customerId", reference: "customer" },
             React.createElement(react_admin_1.TextField, { source: "lastname" })),

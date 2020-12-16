@@ -19,9 +19,9 @@ var react_admin_1 = require("react-admin");
 var react_final_form_1 = require("react-final-form");
 var PostFilter = function (props) {
     return (React.createElement(react_admin_1.Filter, __assign({}, props),
-        React.createElement(react_admin_1.TextInput, { label: "Search", source: "title", alwaysOn: true })));
+        React.createElement(react_admin_1.TextInput, { label: "\u0425\u0430\u0439\u043B\u0442 \u0445\u0438\u0439\u0445", source: "title", alwaysOn: true })));
 };
-exports.TicketList = function (props) { return (React.createElement(react_admin_1.List, __assign({ title: "\u0417\u0430\u0445\u0438\u0430\u043B\u0433\u044B\u043D \u0436\u0430\u0433\u0441\u0430\u0430\u043B\u0442" }, props, { filters: React.createElement(PostFilter, null), exporter: false }),
+exports.TicketList = function (props) { return (React.createElement(react_admin_1.List, __assign({ title: "\u0417\u0430\u0445\u0438\u0430\u043B\u0433\u044B\u043D \u0436\u0430\u0433\u0441\u0430\u0430\u043B\u0442" }, props, { exporter: false }),
     React.createElement(react_admin_1.Datagrid, null,
         React.createElement(react_admin_1.ReferenceField, { label: "\u04AE\u043D\u044D\u0442 \u0446\u0430\u0430\u0441", source: "bondId", reference: "bond" },
             React.createElement(react_admin_1.TextField, { source: "symbol" })),

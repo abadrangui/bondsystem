@@ -33,7 +33,7 @@ const PostFilter = (props: any) => {
 };
 
 export const BalanceList = (props: any) => (
-  <List title="Үлдэгдэл шалгах"  {...props} filters={<PostFilter />} exporter={false}>
+  <List title="Үлдэгдэл шалгах"  {...props} exporter={false}>
     <Datagrid>
       <ReferenceField label="Харилцагч" source="customerId" reference="customer">
         <TextField source="lastname" />

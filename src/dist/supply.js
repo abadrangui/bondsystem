@@ -21,7 +21,7 @@ var PostFilter = function (props) {
     return (React.createElement(react_admin_1.Filter, __assign({}, props),
         React.createElement(react_admin_1.TextInput, { label: "Search", source: "title", alwaysOn: true })));
 };
-exports.SupplyList = function (props) { return (React.createElement(react_admin_1.List, __assign({}, props, { title: "\u041D\u0438\u0439\u043B\u04AF\u04AF\u043B\u044D\u043B\u0442", filters: React.createElement(PostFilter, null), exporter: false }),
+exports.SupplyList = function (props) { return (React.createElement(react_admin_1.List, __assign({}, props, { title: "\u041D\u0438\u0439\u043B\u04AF\u04AF\u043B\u044D\u043B\u0442", exporter: false }),
     React.createElement(react_admin_1.Datagrid, null,
         React.createElement(react_admin_1.ReferenceField, { label: "\u04AE\u043D\u044D\u0442 \u0446\u0430\u0430\u0441", source: "bondId", reference: "bond" },
             React.createElement(react_admin_1.TextField, { source: "symbol" })),

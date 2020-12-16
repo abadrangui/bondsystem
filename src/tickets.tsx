@@ -7,12 +7,9 @@ import {
   Show,
   Create,
   Edit,
-  Filter,
-  // DisabledInput,
   SimpleShowLayout,
   SimpleForm,
   TextField,
-  TextInput,
   ShowButton,
   EditButton,
   DeleteButton,
@@ -21,19 +18,21 @@ import {
   ReferenceInput,
   SelectInput,
   ReferenceField,
-  SelectField,
+  Filter,
+  TextInput,
+
 } from "react-admin";
 import { useFormState } from 'react-final-form';
 
 
 const PostFilter = (props: any) => {
   return (<Filter {...props}>
-    <TextInput label="Search" source="title" alwaysOn />
+    <TextInput label="Хайлт хийх" source="title" alwaysOn />
   </Filter>);
 };
 
 export const TicketList = (props: any) => (
-  <List title="Захиалгын жагсаалт"  {...props} filters={<PostFilter />} exporter={false}>
+  <List title="Захиалгын жагсаалт"  {...props} exporter={false}>
     <Datagrid>
       <ReferenceField label="Үнэт цаас" source="bondId" reference="bond">
         <TextField source="symbol" />

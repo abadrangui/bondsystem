@@ -28,14 +28,17 @@ import {
 import { useFormState } from 'react-final-form';
 
 
-const PostFilter = (props: any) => {
-  return (<Filter {...props}>
-    <TextInput label="Search" source="bond" alwaysOn />
-  </Filter>);
-};
+// const PostFilter = (props: any) => {
+//   return (<Filter {...props}>
+//     <TextInput label="Хайлт хийх" source="bond" alwaysOn />
+//   </Filter>);
+// };
 
 export const TradeList = (props: any) => (
-  <List title="Арилжааны жагсаалт"  {...props} filters={<PostFilter />} exporter={false}>
+  <List title="Арилжааны жагсаалт"
+    {...props}
+    // filters={<PostFilter />}
+    exporter={false}>
     <Datagrid>
       <ReferenceField label="Үнэт цаас" source="bondId" reference="bond">
         <TextField source="symbol" />
